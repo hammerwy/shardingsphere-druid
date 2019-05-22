@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.wy.sharding.sphere.repository.CityRepository">
+    <resultMap id="cityMap" type="com.wy.sharding.sphere.entity.City">
+        <id column="city_id" property="cityId"/>
+        <result column="city" property="city"/>
+        <result column="country_id" property="countryId"/>
+        <result column="last_update" property="lastUpdate"/>
+    </resultMap>
+
+    <sql id="baseColumn">
+        city_id, city, country_id, last_update
+    </sql>
+
+    <select id="findCities" resultMap="cityMap">
+        select
+        <include refid="baseColumn"/>
+        from t_city_0
+        where city_id between #{startId} and #{endId}
+    </select>
+
+    <insert id="save">
+        insert into t_city_0 (city_id, city, country_id)
+        values (#{cityId}, #{city}, #{countryId})
+    </insert>
+</mapper>
+    

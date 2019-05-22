@@ -1,0 +1,48 @@
+logs/
+**/target/
+.DS_Store
+
+### IntelliJ IDEA ###
+**/.idea
+**/*.iws
+**/*.iml
+**/*.ipr
+**/*.mvn
+**/log/
+**/.classpath
+**/.project
+**/.factorypath
+
+HELP.md
+/target/
+!.mvn/wrapper/maven-wrapper.jar
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+/build/
+
+### VS Code ###
+.vscode/
+
+### Maven ###
+**/mvnw
+**/mvnw.cmd
+**/.mvn/
+**/target/
+
+### log ###
+**/*.log
+**/log/
